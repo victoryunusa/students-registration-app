@@ -18,8 +18,9 @@ body {
  
 .container {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 15px auto;
   min-height: 100%;
+  padding: 10px;
   background: white;
 }
  
@@ -46,8 +47,10 @@ h1 {
 form {
   margin-top: 10px;
   margin-bottom: -10px;
+  padding: 5px;
   position: relative;
   padding-left: 160px;
+  border: 3px solid #333333;
 }
 
 .inputtext input{
@@ -63,6 +66,7 @@ form {
 }
  
 .new-task input {
+    border-radius: 25px;
     width: 55%;
     height: 50px;
     border: 3px solid #333333;
@@ -74,8 +78,9 @@ form {
 }
 
 .new-task select {
+    border-radius: 25px;
     width: 58.5%;
-    height: 50px;
+    height: 55px;
     border: 3px solid #333333;
     color: #121212;
      background-color: rgba(0,0,0,0.30);
@@ -90,16 +95,84 @@ form {
 }
 
 .submit-form{
+    border-radius: 25px;
     width: 55%;
     height: 65px;
     border: 3px solid #333333;
     color: #F4F7FA;
     background-color: #0AB259;
+    transition: all 0.5s;
     font-size: 28px;
     border: none;
     margin-top: 25px;
     cursor: pointer;
     margin-bottom: 50px;
+}
+
+.submit-form span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.submit-form span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.submit-form:hover span {
+  padding-right: 25px;
+}
+
+.submit-form:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#deleteStudent {
+
+    border-radius: 25px;
+    width: 30%;
+    height: 40px;
+    border: 3px solid #333333;
+    color: #F4F7FA;
+    background-color: #E02200;
+    transition: all 0.5s;
+    font-size: 28px;
+    border: none;
+    margin-top: 25px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+#deleteStudent span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#deleteStudent span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#deleteStudent:hover span {
+  padding-right: 25px;
+}
+
+#deleteStudent:hover span:after {
+  opacity: 1;
+  right: 0;
 }
  
 ul {

@@ -2,11 +2,13 @@
   <div class="container">
     <header>
       <h1 style="color: white; text-align: center;">Entrepreneurs in Training Registration System</h1>
-
+      {{> loginButtons}}
     </header>
-       <form class="new-task">
+    {{#if currentUser}}
+       <form class="new-task" id="myForm">
           <input type="text" name="firstName" placeholder="Firstname" required="" />
           <input type="text" name="lastName" placeholder="Lastname" required="" />
+          <input type="hidden" name="id" >
           <select name="gender" required="">
             <option value="">Gender</option>
             <option value="Male">Male</option>
@@ -15,9 +17,11 @@
           </select>
           <input type="date" name="dateOfBirth" placeholder="Date of Birth" required="" />
 
-          <button type="submit" class="submit-form">Submit</button>
+          <button type="submit" class="submit-form"><span>Submit</span></button>
       </form>
 
+      <br>
+         <button id="deleteStudent" style="float:right;"><span>Delete</span></button>
     <table>
       <tr>
         <th>Action</th>
@@ -31,6 +35,8 @@
           {{> student}}
         {{/each}}
     </table>
+
+    {{/if}}
   </div>
 </body>
  
